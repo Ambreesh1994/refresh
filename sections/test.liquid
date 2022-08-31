@@ -1,0 +1,25 @@
+<div class="container-fluid">
+   <div class="col-md-4"></div>
+   <div class="col-md-4">
+      <h1>{{ section.settings.name }}</h1>
+   </div>
+   <div class="col-md-4"></div>
+</div>
+
+{% schema %}
+{
+    "name":"test",
+    "settings":[
+        {
+            "type":"text",
+            "id":"name",
+            "label":"Name"
+        }
+      ],
+      "presets":[
+         {
+            "name":"Test"
+         }
+      ]
+}
+{% endschema %}
