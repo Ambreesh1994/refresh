@@ -71,6 +71,12 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
+    "1661968193f2035d20": {
+      "type": "test",
+      "settings": {
+        "name": "hello Ambreesh"
+      }
+    },
     "featured-collection-0": {
       "type": "featured-collection",
       "settings": {
@@ -507,6 +513,7 @@
   },
   "order": [
     "slideshow",
+    "1661968193f2035d20",
     "featured-collection-0",
     "multicolumn-0",
     "image-with-text-0",
