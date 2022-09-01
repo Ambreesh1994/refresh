@@ -1,77 +1,37 @@
 <!-- testing.liquid -->
-<style>
-  
-@media (min-width: 600px) {
-  #my-video {
-    max-width: 600px;
-    max-height: 336px;
-    margin-top: 50px;
-  	margin-left: auto;
-  	margin-right: auto;
-  }
-}
 
-@media (max-width: 600px) {
-  #my-video {
-    max-width: 300px;
-    max-height: 168px;
-    margin-top: 50px;
-  	margin-left: auto;
-  	margin-right: auto;
-  }
-}
+<div class='video'>
+  <script src="https://use.fontawesome.com/20603b964f.js"></script>
+  <script type="text/javascript" src="https://content.jwplatform.com/libraries/LJ361JYj.js"></script>
+  <script type="text/javascript">
+    jwplayer.key = 'ypdL3Acgwp4Uh2/LDE9dYh3W/EPwDMuA2yid4ytssfI=';
+    // jwplayer.key = 'ITWMv7t88JGzI0xPwW8I0+LveiXX9SWbfdmt0ArUSyc=';
+  </script>
+  <div id="myElement"></div>
 
-#my-video {
-  box-shadow: 0 10px 50px rgba(130, 56, 56, 0.85),0 10px 50px rgba(0, 0, 0, 0.65);
-}
-
-p {
-    margin-bottom: 50px;
-    background-color: white;
-    margin-left: auto;
-    margin-right: auto;
-    display: table;
-    font-family: sans-serif;
-    font-size: 20px;
-    color: cornflowerblue;
-}
-</style>
-
-
-
-
-<!DOCTYPE html>
-<html lang="en" >
-
-<head>
-  <meta charset="UTF-8">
-  <title></title>
-  <meta name="viewport" content="width=600, initial-scale=1">
-  
-  
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-
-</head>
-
-<body>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://content.jwplatform.com/libraries/V6NfEzT7.js"></script>
-<div id="my-video"></div>
-  <script src='https://cdn.jwplayer.com/libraries/7sjHar0d.js'></script>
 
   
-
-    <script  src="js/index.js"></script>
-
-
-
-
-</body>
-
-</html>
+  <script type="text/javascript">
+    jwplayer("myElement").setup({
+      image: "https://images.pexels.com/photos/1001682/pexels-photo-1001682.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      //aspectratio: "16:9",
+      // width: '100%',
+      height: window.innerHeight,
+      autostart: false,
+      file : 'https://vjs.zencdn.net/v/oceans.mp4',
+      title: 'Oceans',
+      description: 'etoski on Codepen',
+      aboutlink: 'https://www.jwplayer.com/',
+      tracks:[{"file":"<?php echo $cc; ?>","label":"Indonesia","kind":"captions","default":"true"}],
+      captions: {color: '#ffb800',fontSize: 30,backgroundOpacity: 0},
+      sharing: {
+        sites: ['facebook','twitter','tumblr','googleplus',{icon: '//support-static.jwplayer.com/images/awesome.svg', src: 'http://www.jwplayer.com/?', label:'jwplayer'}],
+        code: encodeURI("<iframe src='<?php echo $sharing;?>' width='480' height='320'></iframe>"),
+        link: "<?php echo $sharing;?>"
+      }
+    })
+  </script>
+</div>
 
 
 
@@ -93,18 +53,3 @@ p {
 {% javascript %}
 {% endjavascript %}
 
-<script>
-  jwplayer("my-video").setup({
-	file: "https://content.jwplatform.com/videos/Wf8BfcSt-kNspJqnJ.mp4",
-	image: "https://www.hbo.com/content/dam/hbodata/series/game-of-thrones/episodes/8/key-art/got-s8-ka-1920x1080.jpg/_jcr_content/renditions/cq5dam.web.1200.675.jpeg",
-	primary: "html5",
-	advertising: {
-		client: "vast",
-	schedule: {
-		"myAds":{
-		"offset":"pre",
-		"tag":"https://ad-stage.visiblemeasures.com/a/2/?pl=218579"}
-		}
-	}
-});
-</script>
